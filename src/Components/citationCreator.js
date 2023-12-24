@@ -71,6 +71,12 @@ const CitationCreationTool = (props) => {
             }}
           >
             {snanButtonText}
+          </button>{" "}
+          <button
+            className="createCitationButton"
+            onClick={createContainerFunction}
+          >
+            Create Citation
           </button>
         </div>
       </div>
@@ -80,12 +86,6 @@ const CitationCreationTool = (props) => {
         placeholder="Reference"
         value={refernceInput}
       ></input>
-      <button
-        className="createCitationButton"
-        onClick={createContainerFunction}
-      >
-        Create Citation
-      </button>
     </div>
   );
 };

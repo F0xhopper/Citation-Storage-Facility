@@ -14,18 +14,41 @@ const CitationInViewDisplay = (props) => {
     props.setAccounts([...props.accounts, accountObject]);
     props.setCitationInPreview(undefined);
   }
+  function favouriteCitation() {
+    const accountObject = props.accounts.filter((account) => {
+      return account.username === props.loggedInAccountUsername;
+    })[0];
+    accountObject.quotes.forEach((quote, i) => {
+      if (quote.citation == props.citationInPreview.citation) {
+        quote.favourite = !quote.favourite;
+      }
+    });
+    props.setAccounts((account) => {
+      return account.username != props.loggedInAccountUsername;
+    });
+    props.setAccounts([...props.accounts, accountObject]);
+  }
   return props.citationInPreview != undefined ? (
     <div className="citationViewContainer">
       {" "}
-      <p className="citationInPreviewCitation">
+      <div className="citationViewFavouriteButton" onClick={favouriteCitation}>
+        {props.citationInPreview.favourite === true ? "★" : "☆"}
+      </div>
+      <p
+        style={{
+          fontSize:
+            props.citationInPreview.citation.length < 93 ? "25px" : "17px",
+        }}
+        className="citationInPreviewCitation"
+      >
         {props.citationInPreview.citation}
       </p>
       <h4 className="citationInPreviewReference">
         {props.citationInPreview.reference}
       </h4>
-      <h5 className="citationInPreviewReference">
+      <h6 className="citationInPreviewReference">
         {props.citationInPreview.date}
-      </h5>
+      </h6>
       <button
         onClick={deleteCitation}
         className="citationInPreviewDeleteButton"

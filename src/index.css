@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(224, 224, 224);
 }
 
 code {
@@ -13,7 +14,7 @@ code {
 }
 .loginContainer {
   margin: auto;
-  border: 2px solid black;
+  border: 1px solid black;
   width: 200px;
   height: 140px;
   margin-top: 250px;
@@ -76,7 +77,7 @@ code {
   margin: auto;
   padding: 4px;
   grid-gap: 4px;
-  grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+  grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
   grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
 }
 .errorMessageH1 {
@@ -94,14 +95,18 @@ code {
   float: left;
 }
 .accountBar {
-  border: 2px black solid;
-  grid-row: 1 /4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(241, 241, 241);
+  grid-row: 1 /3;
   grid-column: 1 / 40;
+  border-radius: 5px;
 }
 .favouritsContainer {
-  border: 2px black solid;
-  grid-row: 4/ 29;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(241, 241, 241);
+  grid-row: 3/ 28;
   grid-column: 31/40;
+  border-radius: 5px;
   float: left;
 }
 .citationPreviewContainer {
@@ -110,41 +115,60 @@ code {
 }
 .userInteratingContainer {
   float: left;
-  border: 2px black solid;
-  grid-row: 4/ 29;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(241, 241, 241);
+  grid-row: 3/ 28;
+  border-radius: 5px;
   grid-column: 1 / 31;
 }
 .createContainerContainer {
-  border: 2px black solid;
+  float: left;
+  border-radius: 5px;
   margin: 4px;
-  height: 50px;
-  width: 850px;
+  height: 120px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  width: 210px;
+  margin-bottom: 0px;
+  margin-right: 0px;
 }
 .citationCreatorContainer {
-  border: 2px black solid;
+  border: 1px black solid;
   margin: 4px;
+  border-radius: 5px;
   width: 585px;
   height: 705px;
 }
 .citationTextAreaInput {
   float: left;
-  border: 2px black solid;
+  border: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
   font-size: 15px;
   margin: 4px;
   margin-bottom: 0px;
   width: 426px;
-  height: 640px;
+  height: 649px;
   resize: none;
 }
 .quoteDisplayContainer {
-  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
   margin: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 257px;
   height: 535px;
+  overflow: scroll;
+}
+.quoteDisplayContainer::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 .ciationSelectorRow:hover {
   background-color: rgb(226, 226, 226);
   cursor: pointer;
+}
+.ciationSelectorRow {
+  background-color: white;
 }
 .quoteChangesableView {
   float: left;
@@ -154,9 +178,9 @@ code {
   height: 716px;
 }
 .ContainerPreviewContainer {
-  border: 2px solid black;
+  border-radius: 5px;
   margin: 4px;
-  width: 850px;
+  width: 863px;
 
   overflow: scroll;
 
@@ -165,30 +189,60 @@ code {
 .ContainerPreviewContainer::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
-
+.accountInfoProfilePic {
+  margin: 10px;
+  margin-top: 12px;
+  float: left;
+  width: 22px;
+}
 .containerButtonSelectContainer {
-  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
   margin: 4px;
-  width: 204px;
+  width: 210px;
   height: 120px;
   margin-bottom: 0px;
   margin-right: 0px;
   float: left;
   cursor: pointer;
 }
-.createContainerInput {
-  font-size: 20px;
+.amountOfCitations {
+  width: max-content;
+  margin: auto;
+  margin-top: 10px;
+}
+.amountOfFavourites {
+  width: max-content;
+  margin: auto;
+  margin-top: 10px;
+}
+.accountInfoUsername {
+  font-size: 17px;
   margin: 4px;
-  border: 2px solid black;
-  width: 412px;
-  height: 37px;
+  margin-top: 8px;
+}
+.createContainerInput {
+  font-size: 12px;
+  margin: 12px;
+  margin-left: 44px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 112px;
+  height: 18px;
 }
 .createContainerButton {
-  font-size: 20px;
+  font-size: 12px;
   margin: 1px;
-  border: 2px solid black;
-  width: 418px;
-  height: 37px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 112px;
+  height: 18px;
+  margin-left: 44px;
+  margin-top: 23px;
   cursor: pointer;
 }
 .containerButtonTitle {
@@ -198,31 +252,51 @@ code {
   margin-top: 10px;
 }
 .logOutButton {
-  float: left;
+  float: right;
+  cursor: pointer;
+  margin: 4px;
+  height: 41px;
+
+  background-color: transparent;
+}
+.logOutButtonText {
+  font-size: 12px;
+  margin: 0px;
 }
 .accountInfoContainer {
   float: left;
+  margin: 4px;
+  height: 44px;
+  border-radius: 5px;
+  width: 208px;
+  background-color: transparent;
 }
 .backButtonAndContainerNameContainer {
-  border: 2px solid black;
+  border: 1px solid black;
+
   margin: 4px;
   width: 257px;
   height: 50px;
 }
 .backButton {
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 4px;
   height: 42px;
+  background-color: rgb(158, 158, 158);
+  color: white;
   float: left;
 }
 .citationViewContainerTitle {
   width: max-content;
 
   margin: auto;
+
   font-size: 32px;
 }
 .createCitationViewButton {
-  border: 2px solid black;
+  border: 1px solid black;
+  background-color: rgb(158, 158, 158);
+  color: white;
   margin: 4px;
   width: 257px;
   height: 50px;
@@ -245,7 +319,9 @@ code {
   height: 700px;
 }
 .citationViewContainer {
-  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 5px;
   margin: 4px;
   width: 585px;
   height: 705px;
@@ -253,22 +329,36 @@ code {
 .createCitationViewVButtonTitle {
   width: max-content;
   margin: auto;
-  font-size: 26px;
+  font-size: 21px;
   margin-top: 8px;
 }
 .referenceInput {
-  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 20px;
+  border: 0px;
   margin: 4px;
-  width: 360px;
+  width: 425px;
   height: 30px;
 }
-.createCitationButton {
-  border: 2px solid black;
-
-  height: 36px;
-  width: 200px;
+.citationViewFavouriteButton {
+  cursor: pointer;
   margin: 4px;
+  font-size: 28px;
+  margin-left: 555px;
+  position: absolute;
+  z-index: 23;
+}
+.createCitationButton {
+  border: 1px solid black;
+  background-color: rgb(158, 158, 158);
+  color: white;
+  cursor: pointer;
+  height: 90px;
+  width: 140px;
+  margin: 4px;
+  margin-left: 0px;
+  margin-top: 344px;
 }
 .citationCreatorUpperContainer {
   width: 589px;
@@ -283,9 +373,12 @@ code {
   float: left;
   width: max-content;
   height: max-content;
+  height: 661px;
 }
 .scanImageButton {
-  border: 2px solid black;
+  border: 1px solid black;
+  background-color: rgb(158, 158, 158);
+  color: white;
   cursor: pointer;
   height: 56px;
   width: 140px;
@@ -296,7 +389,9 @@ code {
 }
 .imageInputLabel {
   display: block;
-  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
   width: 136px;
   height: 200px;
   margin: 4px;
@@ -304,22 +399,32 @@ code {
   cursor: pointer;
 }
 .citationDisplayTable {
-  font-size: 14px;
+  width: 257px;
+
+  font-size: 13px;
 }
 .citationInPreviewCitation {
-  width: 500px;
-  margin: 4px;
+  margin: 34px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 .citationInPreviewReference {
   margin: 4px;
+  margin-left: 34px;
+  margin-top: 0px;
 }
 .citationInPreviewDeleteButton {
-  margin: 4px;
+  margin: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(158, 158, 158);
+  color: white;
+  cursor: pointer;
 }
 .favouriteCitationLargeContainer {
   margin: 4px;
-  border: 2px solid black;
-  height: 622px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 652px;
   overflow: scroll;
 }
 .favouriteCitationLargeContainer::-webkit-scrollbar {
@@ -329,25 +434,91 @@ code {
 .favouriteCitationIndividualContainer {
   cursor: pointer;
   margin: 4px;
-  border: 2px solid black;
-}
-.searchResultsContainer {
-  border: 2px solid black;
   background-color: white;
-  width: 300px;
-  z-index: -100;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.searchResultsContainer {
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+  width: 274px;
+  z-index: 32;
+}
+
+.citationFavouriteButton {
+  border: 0px;
+
+  padding-left: 23px;
+  font-size: 22px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.favouriteCitationCitation {
+  margin: 4px;
+}
+.favouriteCitationReference {
+  margin: 4px;
+}
+.favouriteCitationDate {
+  margin: 4px;
+}
+.SearchBar {
+  border: 1px solid black;
+  margin: 4px;
+  width: 250px;
+  height: 25px;
+  border-radius: 5px 0px 0px 5px;
+  font-size: 13px;
+  margin-right: 0px;
+  float: left;
+}
+.searchResultsTable {
+  width: 270px;
 }
 .SearchBarContainer {
   float: left;
+
+  margin-left: 190px;
 }
+.searchBarButton {
+  float: left;
+  margin: 4px;
+  background-color: rgb(187, 187, 187);
+  color: white;
+  margin-left: -1px;
+  height: 27px;
+  border-radius: 0px 5px 5px 0px;
+  width: 24px;
+  border: 1px solid black;
+}
+
 .deleteContainerButtonContainer {
   cursor: pointer;
   margin: 4px;
-  border: 2px solid black;
+  background-color: rgb(158, 158, 158);
+  color: white;
+  border: 1px solid black;
   height: 47px;
+  width: 257px;
 }
 .deleteContainerButtonTitle {
   width: max-content;
   margin: auto;
   margin-top: 10px;
+}
+
+.searchResultsRow:hover {
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+}
+.searchResultsRow {
+  background-color: white;
+}
+.favouriteTitle {
+  width: max-content;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 9px;
 }

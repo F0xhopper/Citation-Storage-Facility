@@ -1,7 +1,7 @@
 const FavouriteCitationBar = (props) => {
   return (
     <div className="favouritsContainer">
-      <h1>Favourites</h1>
+      <h1 className="favouriteTitle">Favourites</h1>
       <div className="favouriteCitationLargeContainer">
         {props.loggedInAccountObject.quotes
           .filter((quote) => quote.favourite == true)
@@ -16,8 +16,18 @@ const FavouriteCitationBar = (props) => {
                 id={quote.reference}
               >
                 {" "}
-                <h1>{quote.citation}</h1>
-                <h5>{quote.reference}</h5> <h5>{quote.date}</h5>
+                <p
+                  className="favouriteCitationCitation"
+                  style={{
+                    fontSize: quote.citation.length < 3 ? "25px" : "14px",
+                  }}
+                >
+                  {quote.citation}
+                </p>
+                <h4 className="favouriteCitationReference">
+                  {quote.reference}
+                </h4>{" "}
+                <h6 className="favouriteCitationDate">{quote.date}</h6>
               </div>
             );
           })}

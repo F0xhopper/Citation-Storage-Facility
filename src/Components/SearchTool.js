@@ -34,19 +34,23 @@ const SearchBar = (props) => {
   return (
     <div className="SearchBarContainer">
       <input
-        placeholder="SeachBar"
+        className="SearchBar"
+        placeholder="Search"
         onChange={(e) => {
           setsearchInput(e.target.value);
         }}
         onClick={Search}
         value={searchInput}
       ></input>
-
+      <div className="searchBarButton" onClick={Search}>
+        <h5>🔎︎</h5>
+      </div>
       {displayedCitations.length !== 0 ? (
         <div className="searchResultsContainer">
-          <table>
+          <table className="searchResultsTable">
             {displayedCitations.map((citation) => (
               <tr
+                className="searchResultsRow"
                 onClick={() => {
                   setSearchedToPreview(citation);
                 }}

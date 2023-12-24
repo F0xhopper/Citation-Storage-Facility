@@ -21,29 +21,34 @@ const CitationSelector = (props) => {
           <th>Citation</th> <th>Date</th>
           <th>Favourite</th>
         </tr>
-        {props.loggedInAccountObject.quotes
-          .filter((quote) => quote.container == props.insideContainer)
-          .map((val, key) => {
-            return (
-              <tr
-                className="ciationSelectorRow"
-                key={key}
-                onMouseEnter={() => {
-                  props.setCitationInPreview(val);
-                }}
-              >
-                <td>{val.reference}</td>
-                <td>{val.citation.slice(0, 6)}</td>
-                <td>{val.date}</td>
-                <td>
-                  {val.favourite}
-                  <button onClick={() => favouriteCitation(val.reference)}>
-                    {val.favourite == true ? "★" : "☆"}
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
+        <tbody className="citationTableScrollable">
+          {props.loggedInAccountObject.quotes
+            .filter((quote) => quote.container == props.insideContainer)
+            .map((val, key) => {
+              return (
+                <tr
+                  className="ciationSelectorRow"
+                  key={key}
+                  onMouseEnter={() => {
+                    props.setCitationInPreview(val);
+                  }}
+                >
+                  <td>{val.reference}</td>
+                  <td>{val.citation.slice(0, 6)}</td>
+                  <td>{val.date}</td>
+                  <td>
+                    {val.favourite}
+                    <button
+                      className="citationFavouriteButton"
+                      onClick={() => favouriteCitation(val.reference)}
+                    >
+                      {val.favourite == true ? "★" : "☆"}
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+        </tbody>
       </table>
     </div>
   );
