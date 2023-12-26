@@ -68,7 +68,11 @@ const CitationCreationTool = (props) => {
             className="imageInputLabel"
             style={{ display: fileInput == undefined ? null : "none" }}
           >
-            {fileInput == undefined ? "Select Image" : "Image Selected"}
+            <p className="imageInputTitle">
+              {fileInput == undefined
+                ? "Select Image To Scan"
+                : "Image Selected"}
+            </p>
           </label>{" "}
           <div
             style={{ display: fileInput == undefined ? "none" : null }}
@@ -79,12 +83,12 @@ const CitationCreationTool = (props) => {
           >
             {snanButtonText}
           </div>{" "}
-          <button
+          <div
             className="createCitationButton"
             onClick={createContainerFunction}
           >
             Create Citation
-          </button>
+          </div>
         </div>
       </div>
       <input

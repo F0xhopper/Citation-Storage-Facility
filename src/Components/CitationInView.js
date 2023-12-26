@@ -38,7 +38,7 @@ const CitationInViewDisplay = (props) => {
       <p
         style={{
           fontSize:
-            props.citationInPreview.citation.length < 93 ? "25px" : "16px",
+            props.citationInPreview.citation.length < 93 ? null : "16px",
         }}
         className="citationInPreviewCitation"
       >

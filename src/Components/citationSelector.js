@@ -27,13 +27,13 @@ const CitationSelector = (props) => {
             .map((val, key) => {
               return (
                 <tr
-                  className="ciationSelectorRow"
                   key={key}
                   onMouseEnter={() => {
                     props.setCitationInPreview(val);
                   }}
+                  className="ciationSelectorRow"
                 >
-                  <td>{val.reference}</td>
+                  <td className="citationTableReference">{val.reference}</td>
                   <td>{val.citation.slice(0, 6)}</td>
                   <td>{val.date}</td>
                   <td>
