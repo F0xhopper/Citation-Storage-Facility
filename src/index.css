@@ -14,7 +14,10 @@ code {
 }
 .loginContainer {
   margin: auto;
-  border: 1px solid black;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   width: 200px;
   height: 140px;
   margin-top: 250px;
@@ -26,6 +29,8 @@ code {
 }
 .usernameInput {
   width: 133px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .passwordConfirmInputContainer,
 .passwordInputContainer {
@@ -36,6 +41,8 @@ code {
 .passwordConfirmInput,
 .passwordInput {
   width: 133px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .titleCon {
   margin: auto;
@@ -151,6 +158,9 @@ code {
   height: 649px;
   resize: none;
 }
+.citationTextAreaInput::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 .quoteDisplayContainer {
   border-radius: 5px;
   background-color: white;
@@ -207,20 +217,21 @@ code {
   float: left;
   cursor: pointer;
 }
-.amountOfCitations {
-  width: max-content;
-  margin: auto;
-  margin-top: 10px;
+.containerButtonSelectContainer:hover {
+  outline: 1px solid black;
 }
+
+.amountOfCitations,
 .amountOfFavourites {
   width: max-content;
   margin: auto;
   margin-top: 10px;
 }
+
 .accountInfoUsername {
   font-size: 17px;
   margin: 4px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 .createContainerInput {
   font-size: 12px;
@@ -233,16 +244,15 @@ code {
   height: 18px;
 }
 .createContainerButton {
-  font-size: 12px;
+  font-size: 42px;
   margin: 1px;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 5px;
-  border: 1px solid black;
-  width: 112px;
-  height: 18px;
-  margin-left: 44px;
-  margin-top: 23px;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+
+  width: max-content;
+  height: 30px;
+  margin-left: 174px;
+  margin-top: 20px;
   cursor: pointer;
 }
 .containerButtonTitle {
@@ -271,19 +281,28 @@ code {
   width: 208px;
   background-color: transparent;
 }
+.searchBarIcon {
+  margin: 4px;
+  cursor: pointer;
+}
 .backButtonAndContainerNameContainer {
   border: 1px solid black;
 
+  border-radius: 5px;
   margin: 4px;
   width: 257px;
   height: 50px;
 }
+.backButtonTitle {
+  margin: 0px;
+  font-size: 12px;
+  cursor: pointer;
+}
 .backButton {
-  border: 1px solid black;
   margin: 4px;
   height: 42px;
-  background-color: rgb(158, 158, 158);
-  color: white;
+
+  color: rgb(0, 0, 0);
   float: left;
 }
 .citationViewContainerTitle {
@@ -295,12 +314,16 @@ code {
 }
 .createCitationViewButton {
   border: 1px solid black;
-  background-color: rgb(158, 158, 158);
+  background-color: rgb(172, 172, 172);
   color: white;
   margin: 4px;
+  border-radius: 5px;
   width: 257px;
   height: 50px;
   cursor: pointer;
+}
+.createCitationViewButton:hover {
+  background-color: rgb(128, 128, 128);
 }
 .dashboardCitationViewContainer {
   width: 860px;
@@ -335,17 +358,18 @@ code {
 .referenceInput {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 20px;
+  font-size: 16px;
   border: 0px;
   margin: 4px;
   width: 425px;
   height: 30px;
+  margin-top: 0px;
 }
 .citationViewFavouriteButton {
   cursor: pointer;
-  margin: 4px;
-  font-size: 28px;
-  margin-left: 555px;
+
+  font-size: 22px;
+  margin-left: 561px;
   position: absolute;
   z-index: 23;
 }
@@ -366,8 +390,10 @@ code {
 }
 .scanImageToolContainer {
   float: left;
-  width: 130px;
-  height: 500px;
+  width: 141px;
+
+  border-radius: 5px;
+  height: 200px;
 }
 .citationTextAreaInputContainer {
   float: left;
@@ -376,12 +402,15 @@ code {
   height: 661px;
 }
 .scanImageButton {
-  border: 1px solid black;
-  background-color: rgb(158, 158, 158);
-  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+
+  margin: 4px;
   cursor: pointer;
-  height: 56px;
-  width: 140px;
+  height: 60px;
+  margin-left: 0px;
+  width: 142px;
 }
 
 .imageInput {
@@ -392,8 +421,8 @@ code {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
-  width: 136px;
-  height: 200px;
+  width: 142px;
+  height: 60px;
   margin: 4px;
   margin-left: 0px;
   cursor: pointer;
@@ -406,6 +435,7 @@ code {
 .citationInPreviewCitation {
   margin: 34px;
   margin-bottom: 0px;
+  padding-top: 26px;
   margin-top: 0px;
 }
 .citationInPreviewReference {
@@ -434,16 +464,21 @@ code {
 .favouriteCitationIndividualContainer {
   cursor: pointer;
   margin: 4px;
+  padding: 4px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
-
+.favouriteCitationIndividualContainer:hover {
+  outline: solid 1px black;
+}
 .searchResultsContainer {
   border: 1px solid black;
   background-color: white;
   position: absolute;
-  width: 274px;
+  margin-top: 33px;
+  margin-left: 4px;
+  width: 279px;
   z-index: 32;
 }
 
@@ -475,11 +510,11 @@ code {
   float: left;
 }
 .searchResultsTable {
-  width: 270px;
+  width: 279px;
 }
 .SearchBarContainer {
   float: left;
-
+  margin-top: 8px;
   margin-left: 190px;
 }
 .searchBarButton {
@@ -492,16 +527,23 @@ code {
   border-radius: 0px 5px 5px 0px;
   width: 24px;
   border: 1px solid black;
+  cursor: pointer;
 }
-
+.searchBarButton:hover {
+  background-color: rgb(206, 206, 206);
+}
 .deleteContainerButtonContainer {
   cursor: pointer;
   margin: 4px;
   background-color: rgb(158, 158, 158);
   color: white;
+  border-radius: 5px;
   border: 1px solid black;
   height: 47px;
   width: 257px;
+}
+.deleteContainerButtonContainer:hover {
+  background-color: rgb(187, 187, 187);
 }
 .deleteContainerButtonTitle {
   width: max-content;

@@ -6,7 +6,7 @@ const CreateContainerTool = (props) => {
     const accountObject = props.accounts.filter((account) => {
       return account.username === props.loggedInAccountUsername;
     })[0];
-    accountObject.containers.push(containerNameInput);
+    accountObject.containers.unshift(containerNameInput);
     props.setAccounts((account) => {
       return account.username != props.loggedInAccountUsername;
     });
@@ -21,12 +21,9 @@ const CreateContainerTool = (props) => {
         placeholder="Container Name"
         value={containerNameInput}
       ></input>
-      <button
-        className="createContainerButton"
-        onClick={createContainerFunction}
-      >
-        Create Container
-      </button>
+      <div className="createContainerButton" onClick={createContainerFunction}>
+        +
+      </div>
     </div>
   );
 };

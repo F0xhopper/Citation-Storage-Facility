@@ -43,7 +43,7 @@ const SearchBar = (props) => {
         value={searchInput}
       ></input>
       <div className="searchBarButton" onClick={Search}>
-        <h5>🔎︎</h5>
+        <h5 className="searchBarIcon">🔎︎</h5>
       </div>
       {displayedCitations.length !== 0 ? (
         <div className="searchResultsContainer">

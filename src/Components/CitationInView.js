@@ -28,6 +28,7 @@ const CitationInViewDisplay = (props) => {
     });
     props.setAccounts([...props.accounts, accountObject]);
   }
+
   return props.citationInPreview != undefined ? (
     <div className="citationViewContainer">
       {" "}
@@ -37,7 +38,7 @@ const CitationInViewDisplay = (props) => {
       <p
         style={{
           fontSize:
-            props.citationInPreview.citation.length < 93 ? "25px" : "17px",
+            props.citationInPreview.citation.length < 93 ? "25px" : "16px",
         }}
         className="citationInPreviewCitation"
       >

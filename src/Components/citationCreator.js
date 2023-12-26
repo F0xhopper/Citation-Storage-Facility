@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { createWorker } from "tesseract.js";
-
+import { FileUploader } from "react-drag-drop-files";
 const CitationCreationTool = (props) => {
   const [citationInput, setCitationInput] = useState("");
   const [refernceInput, setRefernceInput] = useState("");
   const [fileInput, setFileInput] = useState();
-  const [snanButtonText, setSnanButtonText] = useState("Scan Image");
+  const [snanButtonText, setSnanButtonText] = useState("Scan Selected Image");
   function createContainerFunction() {
     const accountObject = props.accounts.filter((account) => {
       return account.username === props.loggedInAccountUsername;
@@ -32,6 +32,7 @@ const CitationCreationTool = (props) => {
     setCitationInput("");
     setRefernceInput("");
   }
+
   async function scanImage() {
     const beforeCitation = citationInput;
     setSnanButtonText("Loading");
@@ -39,6 +40,7 @@ const CitationCreationTool = (props) => {
     const ret = await worker.recognize(fileInput);
     setCitationInput(ret.data.text);
     setSnanButtonText("Scan Item");
+    setFileInput(undefined);
     await worker.terminate();
   }
   return (
@@ -61,17 +63,22 @@ const CitationCreationTool = (props) => {
               setFileInput(e.target.files[0]);
             }}
           ></input>
-          <label htmlFor="imageInput" className="imageInputLabel">
+          <label
+            htmlFor="imageInput"
+            className="imageInputLabel"
+            style={{ display: fileInput == undefined ? null : "none" }}
+          >
             {fileInput == undefined ? "Select Image" : "Image Selected"}
-          </label>
-          <button
+          </label>{" "}
+          <div
+            style={{ display: fileInput == undefined ? "none" : null }}
             className="scanImageButton"
             onClick={() => {
               scanImage();
             }}
           >
             {snanButtonText}
-          </button>{" "}
+          </div>{" "}
           <button
             className="createCitationButton"
             onClick={createContainerFunction}

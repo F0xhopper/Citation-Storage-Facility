@@ -67,14 +67,14 @@ function App() {
               <div className="dashboardCitationViewContainer">
                 <div className="citationLeftSideContainer">
                   <div className="backButtonAndContainerNameContainer">
-                    <button
+                    <div
                       className="backButton"
                       onClick={() => {
                         setInsideContainer(undefined);
                       }}
                     >
-                      Back
-                    </button>
+                      <h3 className="backButtonTitle">←Back</h3>
+                    </div>
                     <h4 className="citationViewContainerTitle">
                       {" "}
                       {insideContainer}
@@ -97,6 +97,7 @@ function App() {
                     accounts={accounts}
                     setAccounts={setAccounts}
                     loggedInAccountUsername={loggedInAccountUsername}
+                    citationInPreview={citationInPreview}
                   />
                   <DeleteContainer
                     loggedInAccountUsername={loggedInAccountUsername}

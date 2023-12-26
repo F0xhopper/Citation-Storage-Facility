@@ -19,7 +19,7 @@ const FavouriteCitationBar = (props) => {
                 <p
                   className="favouriteCitationCitation"
                   style={{
-                    fontSize: quote.citation.length < 3 ? "25px" : "14px",
+                    fontSize: quote.citation.length < 3 ? "25px" : "12px",
                   }}
                 >
                   {quote.citation}
