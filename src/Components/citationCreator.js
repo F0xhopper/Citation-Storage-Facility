@@ -87,7 +87,8 @@ const CitationCreationTool = (props) => {
             className="createCitationButton"
             onClick={createContainerFunction}
           >
-            Create Citation
+            <h5 className="createCitationButtonTitle1">Create </h5>{" "}
+            <h5 className="createCitationButtonTitle2"> Citation</h5>
           </div>
         </div>
       </div>

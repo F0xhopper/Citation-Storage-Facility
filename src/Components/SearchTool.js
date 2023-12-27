@@ -12,8 +12,8 @@ const SearchBar = (props) => {
       props.loggedInAccountObject.quotes.forEach((quote) => {
         if (displayQuotes.includes(quote)) {
         } else if (
-          quote.citation.includes(searchInput) ||
-          quote.reference.includes(searchInput)
+          quote.citation.toUpperCase().includes(searchInput.toUpperCase()) ||
+          quote.reference.toUpperCase().includes(searchInput.toUpperCase())
         ) {
           displayQuotes.push(quote);
         }
@@ -56,7 +56,14 @@ const SearchBar = (props) => {
                 }}
               >
                 <td>{citation.reference}</td>
-                <td>{citation.citation}</td> <td>{citation.date}</td>
+                <td
+                  style={{
+                    fontSize: citation.citation.length < 20 ? null : "11px",
+                  }}
+                >
+                  {citation.citation.slice(0, 140)}
+                </td>{" "}
+                <td>{citation.date}</td>
               </tr>
             ))}
           </table>

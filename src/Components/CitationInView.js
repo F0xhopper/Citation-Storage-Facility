@@ -47,15 +47,10 @@ const CitationInViewDisplay = (props) => {
       <h4 className="citationInPreviewReference">
         {props.citationInPreview.reference}
       </h4>
-      <h6 className="citationInPreviewReference">
-        {props.citationInPreview.date}
-      </h6>
-      <button
-        onClick={deleteCitation}
-        className="citationInPreviewDeleteButton"
-      >
+      <h6 className="citationInPreviewDate">{props.citationInPreview.date}</h6>
+      <div onClick={deleteCitation} className="citationInPreviewDeleteButton">
         Delete Citation
-      </button>
+      </div>
     </div>
   ) : null;
 };

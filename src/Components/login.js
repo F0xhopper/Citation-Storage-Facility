@@ -54,7 +54,7 @@ const Login = (props) => {
               : "140px"
             : errorMessage === "Incorrect Inputs"
             ? "195px"
-            : "165px",
+            : "171px",
       }}
       className="loginContainer"
     >
@@ -92,6 +92,9 @@ const Login = (props) => {
               onClick={() => {
                 setLoginState("Create");
                 setErrorMessage("");
+                setPasswordInput("");
+                setUsernameInput("");
+                setPasswordConfirmInput("");
               }}
             >
               Create Account
