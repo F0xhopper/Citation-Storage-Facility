@@ -35,21 +35,25 @@ const CitationInViewDisplay = (props) => {
       <div className="citationViewFavouriteButton" onClick={favouriteCitation}>
         {props.citationInPreview.favourite === true ? "★" : "☆"}
       </div>
-      <p
-        style={{
-          fontSize:
-            props.citationInPreview.citation.length < 93 ? null : "16px",
-        }}
-        className="citationInPreviewCitation"
-      >
-        {props.citationInPreview.citation}
-      </p>
-      <h4 className="citationInPreviewReference">
-        {props.citationInPreview.reference}
-      </h4>
-      <h6 className="citationInPreviewDate">{props.citationInPreview.date}</h6>
+      <div className="inPreviewScrollableContainer">
+        <p
+          style={{
+            fontSize:
+              props.citationInPreview.citation.length < 93 ? null : "16px",
+          }}
+          className="citationInPreviewCitation"
+        >
+          {props.citationInPreview.citation}
+        </p>
+        <h4 className="citationInPreviewReference">
+          {props.citationInPreview.reference}
+        </h4>
+        <h6 className="citationInPreviewDate">
+          {props.citationInPreview.date}
+        </h6>
+      </div>
       <div onClick={deleteCitation} className="citationInPreviewDeleteButton">
-        Delete Citation
+        <h3 className="deleteCitationButtonTitle">Delete Citaion</h3>
       </div>
     </div>
   ) : null;

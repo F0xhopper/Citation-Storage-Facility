@@ -48,6 +48,14 @@ const ContainerPreview = (props) => {
           </div>
         );
       })}
+      <img
+        style={{
+          display:
+            props.loggedInAccountObject.containers.length < 1 ? null : "none",
+        }}
+        className="introImage"
+        src={require("../Images/New Project (6).png")}
+      ></img>
     </div>
   );
 };
