@@ -8,13 +8,14 @@ const SearchBar = (props) => {
   function Search() {
     setdisplayedCitations([]);
     let displayQuotes = [];
-    if (searchInput != "" || undefined) {
+    if (searchInput !== "" || undefined) {
       props.loggedInAccountObject.quotes.forEach((quote) => {
         if (displayQuotes.includes(quote)) {
         } else if (
-          quote.citation.toUpperCase().includes(searchInput.toUpperCase()) ||
-          quote.reference.toUpperCase().includes(searchInput.toUpperCase())
+          quote.citation?.toLowerCase().includes(searchInput?.toLowerCase()) ||
+          quote.reference?.toLowerCase().includes(searchInput?.toLowerCase())
         ) {
+          console.log(quote.citation, searchInput);
           displayQuotes.push(quote);
         }
       });
@@ -28,7 +29,6 @@ const SearchBar = (props) => {
     setsearchInput("");
   }
   useEffect(() => {
-    console.log(displayedCitations);
     Search();
   }, [searchInput]);
   return (

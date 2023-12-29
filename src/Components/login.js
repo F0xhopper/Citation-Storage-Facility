@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import demoAccount from "../misc/demoAccountObject";
 const Login = (props) => {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -13,6 +14,11 @@ const Login = (props) => {
       this.quotes = [];
     }
   }
+  useEffect(() => {
+    if (!props.accounts.find((account) => account.username === "45")) {
+      props.setAccounts([...props.accounts, demoAccount]);
+    }
+  });
   function loginFunction() {
     const user = props.accounts.find(
       (account) =>
@@ -44,6 +50,7 @@ const Login = (props) => {
     setUsernameInput("");
     setPasswordConfirmInput("");
   }
+
   return (
     <div
       style={{

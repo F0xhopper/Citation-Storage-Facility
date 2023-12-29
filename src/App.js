@@ -19,6 +19,7 @@ function App() {
       return account.username === loggedInAccountUsername;
     })[0];
     setLoggedInAccountObject(object);
+    console.log(loggedInAccountObject);
   });
 
   return (
@@ -71,6 +72,7 @@ function App() {
                       className="backButton"
                       onClick={() => {
                         setInsideContainer(undefined);
+                        setCitationInPreview(undefined);
                       }}
                     >
                       <h3 className="backButtonTitle">←Back</h3>
