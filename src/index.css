@@ -248,7 +248,7 @@ td {
 .accountInfoUsername {
   font-size: 17px;
   margin: 4px;
-  margin-top: 11px;
+  margin-top: 14px;
 }
 .createContainerInput {
   font-size: 12px;
@@ -377,7 +377,7 @@ td {
 .createCitationViewVButtonTitle {
   width: max-content;
   margin: auto;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 14px;
 }
 .imageInputTitle {
@@ -442,9 +442,9 @@ td {
 .createCitationButtonTitle1 {
   width: 100px;
   margin: auto;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
-  margin-top: 24px;
+  margin-top: 27px;
 }
 
 .citationTextAreaInputContainer {
@@ -567,8 +567,12 @@ td {
   margin-left: 4px;
   width: 279px;
   z-index: 32;
+  overflow: scroll;
+  height: 500px;
 }
-
+.searchResultsContainer::-webkit-scrollbar {
+  display: none;
+}
 .citationFavouriteButton {
   border: 0px;
 
@@ -637,7 +641,7 @@ td {
 .deleteContainerButtonTitle {
   width: max-content;
   margin: auto;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 13px;
 }
 

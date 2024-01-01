@@ -15,11 +15,12 @@ function App() {
   const [loggedInAccountObject, setLoggedInAccountObject] = useState();
   const [citationInPreview, setCitationInPreview] = useState(undefined);
   useEffect(() => {
+    document.body.style.zoom = "94%";
+
     const object = accounts.filter((account) => {
       return account.username === loggedInAccountUsername;
     })[0];
     setLoggedInAccountObject(object);
-    console.log(loggedInAccountObject);
   });
 
   return (
@@ -77,7 +78,14 @@ function App() {
                     >
                       <h3 className="backButtonTitle">←Back</h3>
                     </div>
-                    <h4 className="citationViewContainerTitle">
+                    <h4
+                      className="citationViewContainerTitle"
+                      style={{
+                        fontSize: insideContainer.length < 15 ? "22px" : "15px",
+                        marginTop:
+                          insideContainer.length < 15 ? "12px" : "15px",
+                      }}
+                    >
                       {" "}
                       {insideContainer}
                     </h4>
